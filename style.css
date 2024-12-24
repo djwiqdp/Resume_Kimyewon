@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    line-height: 1.6;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top-text {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    color: #fff;
+    text-align: right;
+    font-size: 4.5rem;
+    line-height: 6rem;
+}
+
+
+.italic {
+    font-style: italic;
+    display: inline-block;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Scroll Indicator 애니메이션 */
+.scroll-indicator {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Scroll Circle 애니메이션 */
+.scroll-circle {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 2s infinite;
+}
+
+
+/* 애니메이션 정의 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+/* 공감과 괄호 애니메이션 */
+.top-text .italic {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: appear 1s ease-in-out forwards;
+}
+
+.top-text .italic:nth-child(1) {
+    animation-delay: 0.4s; /* 첫 괄호 ( */
+}
+
+.top-text .italic:nth-child(2) {
+    animation-delay: 0.8s; /* 공감 */
+}
+
+.top-text .italic:nth-child(3) {
+    animation-delay: 1.0s; /* 닫는 괄호 ) */
+}
+
+/* 애니메이션 정의 */
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.intro {
+    padding: 150px 5%;
+    background: #fff;
+}
+
+.intro-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* KIM YEWON 글자 스타일 */
+.intro-text h1 {
+    font-size: 50px; /* 글자 크기 키움 */
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+}
+
+
+.contact-info a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.contact-info a:hover {
+    text-decoration: none;
+}
+
+.bio h2 {
+    margin: 20px 0;
+}
+
+hr {
+    margin: 150px auto;
+    width: 100%; /* 선 길이 늘림 */
+    border: none;
+    border-top: 1px solid #000; /* 선 굵기 얇게 조정 */
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #121212;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.back-to-top {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Education 섹션 스타일 */
+.education {
+    margin-top: 50px;
+    text-align: left;
+    position: relative;
+    left: 0;
+}
+
+.education h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.education p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.year {
+    font-weight: bold;
+    color: #808080; /* 그레이 색상 */
+    font-size: 10px;
+}
+
+/* Experience 스타일 */
+.experience {
+    margin-top: -470px; /* 위로 이동 */
+    position: relative;
+    left: 38%; /* 화면 가로 기준 중앙 */
+    text-align: left; /* 왼쪽 정렬 */
+    width: 50%; /* 적절한 너비 설정 */
+}
+
+.experience h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.experience p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.experience .year {
+    font-weight: bold;
+    color: #808080; /* 그레이 색상 */
+    font-size: 10px;
+}
+
+/* Work 스타일 */
+.work {
+    margin-top: 100px; /* Experience와 구분하기 위한 여백 */
+    position: relative;
+    left: 38%; /* 화면 가로 기준 중앙 */
+    text-align: left; /* 왼쪽 정렬 */
+    width: 50%; /* 적절한 너비 설정 */
+}
+
+.work h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.work p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.work .year {
+    font-weight: bold;
+    color: #808080; /* 그레이 색상 */
+    font-size: 10px;
+}
+
+/* Award 스타일 */
+.award {
+    margin-top: -850px; /* Education 및 Experience와 동일한 선상 */
+    position: absolute;
+    left: 73%; /* 화면 가로 기준 중앙 */
+    right: 0; /* 오른쪽 정렬 */
+    text-align: left; /* 텍스트는 왼쪽 정렬 */
+    width: 50%; /* 적절한 너비 설정 */
+}
+
+.award h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.award p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.award .year {
+    font-weight: bold;
+    color: #808080; /* 그레이 색상 */
+    font-size: 10px;
+}
+
+/* Skill 섹션 스타일 */
+.skill {
+    margin-top: 50px; /* Education 아래 위치 */
+    text-align: left;
+    position: relative;
+    left: 0;
+}
+
+.skill h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.skill p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* 초기 상태 설정 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.0s ease-out, transform 1.0s ease-out;
+}
+
+/* 나타나는 상태 */
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 드래그된 텍스트 스타일 */
+::selection {
+    background-color: #121212; /* 배경색 */
+    color: #ffffff; /* 텍스트 색상 */
+}
+
